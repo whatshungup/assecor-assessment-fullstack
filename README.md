@@ -9,7 +9,6 @@ Das Ziel ist es ein REST – Interface zu implementieren und dieses in einer Web
 * Alle Personen mit exakten Lieblingsfarben können über das Interface identifiziert werden
 * Übersichts- und den Detailseiten sollen in der Webanwendung visualisiert sein
 * Die Daten auf der Übersichtsseite sollen filter- und sortierbar sein
-* Neue Einträge sollten über die Webanwendung hinzugefügt werden können
 
 Einige Beispieldatensätze finden sich in `sample-input.csv`. Die Zahlen der ersten Spalte sollen den folgenden Farben entsprechen:
 
@@ -79,10 +78,11 @@ Das Ausgabeformat der Daten ist als `application/json` festgelegt. Die Schnittst
 6.  Die `sample-input.csv` wurde nicht verändert 
 7. Die Daten werden in der Webanwedung visualisiert
 8. Responsive Design wurde berücksichtigt
-9. Neue Einträge können über die Webanwendung hinzugefügt werden
 
 ## Bonuspunkte
+* Implementieren Sie eine zusätzliche Methode POST/ Personen mit Anbindung an eine Formular zur Erstellung neuer Einträge
 * Implementierung als MSBuild Projekt für kontinuierliche Integration auf TFS (C#/.NET) oder als Maven/Gradle Projekt (Java)
 * Anbindung einer zweiten Datenquelle (z.B. Datenbank via Entity Framework)
 
 Denk an deine zukünftigen Kollegen, und mach es ihnen nicht zu einfach, indem du deine Lösung öffentlich zur Schau stellst. Danke!
+
