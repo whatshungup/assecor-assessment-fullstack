@@ -2,7 +2,7 @@
 
 ## Zielsetzung
 
-Das Ziel ist es ein REST – Interface zu implementieren und dieses in einer Webanwendung aufzurufen und die Daten zu visualisieren. Die REST Schnittstelle soll mit Java und die Webanwendung mit Angular erstellt werden. Dabei sind die folgenden Anforderungen zu erfüllen:
+Das Ziel ist es ein REST – Interface zu implementieren und dieses in einer Webanwendung aufzurufen und die Daten zu visualisieren. Für die REST Schnittstelle stehen .NET(C#) oder Java und die Webanwendung mit Angular oder React als Frameworks zu Verfügung. Dabei sind die folgenden Anforderungen zu erfüllen:
 
 * Es soll möglich sein, Personen und ihre Lieblingsfarbe über das Interface zu verwalten
 * Die Daten sollen aus einer CSV Datei lesbar sein, ohne dass die CSV angepasst werden muss
@@ -80,7 +80,7 @@ Das Ausgabeformat der Daten ist als `application/json` festgelegt. Die Schnittst
 8. Responsive Design wurde berücksichtigt
 
 ## Bonuspunkte
-* Implementieren Sie eine zusätzliche Methode POST/ Personen mit Anbindung an eine Formular zur Erstellung neuer Einträge
+* Implementieren Sie eine zusätzliche Methode POST/ Personen mit Anbindung an ein Formular zur Erstellung neuer Einträge
 * Implementierung als MSBuild Projekt für kontinuierliche Integration auf TFS (C#/.NET) oder als Maven/Gradle Projekt (Java)
 * Anbindung einer zweiten Datenquelle (z.B. Datenbank via Entity Framework)
 
