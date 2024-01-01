@@ -19,7 +19,6 @@ public class PersonEntity implements Serializable {
     private ColorEntity color;
 
 
-
     public PersonEntity(){
 
     }

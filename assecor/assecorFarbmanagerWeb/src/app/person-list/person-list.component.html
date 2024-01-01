@@ -1,0 +1,40 @@
+<div class="card my-5">
+  <div class="card-body">
+
+    <div class="form-group">
+      <select #colorSelection (change)="colorSelected(colorSelection.value)">
+        <option value="" disabled selected>Nach Lieblingsfarbe filtern</option>
+        <option *ngFor="let color of COLORS"
+                [value]="color.id">
+          {{color.name}}
+        </option>
+      </select>
+      <p>
+        <button (click)="getAllPersons()" mat-flat-button color="primary">Zurücksetzen</button>
+      </p>
+    </div>
+
+    <table class="table table-bordered table-striped" matSort (matSortChange)="sortData($event)">
+      <thead class="thead-dark">
+      <tr>
+        <th mat-sort-header="name" scope="col">Name</th>
+        <th mat-sort-header="lastName" scope="col">Nachname</th>
+        <th *ngIf="!hideColumns" mat-sort-header="city" scope="col">Ort</th>
+        <th *ngIf="!hideColumns" mat-sort-header="zipcode" scope="col">Postleitzahl</th>
+        <th *ngIf="!hideColumns" mat-sort-header="col"  scope="col">Lieblingsfarbe</th>
+        <th></th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let person of persons">
+        <td>{{person.name}}</td>
+        <td>{{person.lastName}}</td>
+        <td *ngIf="!hideColumns" >{{person.city}}</td>
+        <td *ngIf="!hideColumns" >{{person.zipcode}}</td>
+        <td *ngIf="!hideColumns" [bgColor]="person.color.htmlCode"> {{person.color.name}}</td>
+        <td><a [routerLink]="['/profile', person.id]">Detail</a></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

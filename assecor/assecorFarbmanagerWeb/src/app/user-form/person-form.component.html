@@ -1,0 +1,53 @@
+<div class="card my-5">
+  <div class="card-body">
+    <form (ngSubmit)="onSubmit()" #userForm="ngForm">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" [(ngModel)]="person.name"
+               class="form-control"
+               id="name"
+               name="name"
+               required #name="ngModel">
+      </div>
+      <div [hidden]="!name.pristine" class="alert alert-danger">Der Name wird benötigt</div>
+      <div class="form-group">
+        <label for="lastName">lastName</label>
+        <input type="text" [(ngModel)]="person.lastName"
+               class="form-control"
+               id="lastName"
+               name="lastName"
+              required #lastName="ngModel">
+        </div>
+      <div [hidden]="!lastName.pristine" class="alert alert-danger">Der Nachname wird benötigt</div>
+      <div class="form-group">
+        <label for="city">Ort</label>
+        <input type="text" [(ngModel)]="person.city"
+               class="form-control"
+               id="city"
+               name="city">
+      </div>
+      <div class="form-group">
+        <label for="zipcode">PLZ</label>
+        <input type="text" [(ngModel)]="person.zipcode"
+               class="form-control"
+               id="zipcode"
+               name="zipcode">
+      </div>
+      <div class="form-group">
+        <label for="color">Lieblingsfarbe</label>
+    <p>
+      <select class="form-control"
+              id="color"
+              [(ngModel)]="person.color"
+              name="color">
+        <option value="" selected>Lieblingsfarbe auswählen</option>
+        <option *ngFor="let color of COLORS" [ngValue]="color">{{color.name}}</option>
+      </select>
+    </p>
+
+      </div>
+      <button type="submit" [disabled]="!userForm.form.valid"
+              class="btn btn-info">Submit</button>
+    </form>
+  </div>
+</div>

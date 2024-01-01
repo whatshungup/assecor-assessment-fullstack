@@ -1,0 +1,12 @@
+<div class="card my-5">
+    <ng-container *ngIf="person">
+      <div class="card-body">
+        <p>ID: {{person.id}}</p>
+        <p>Name: {{person.name}}</p>
+        <p>Nachname: {{person.lastName}}</p>
+        <p>Ort: {{person.city}}</p>
+        <p>PLZ: {{person.zipcode}}</p>
+        <p>Lieblingsfarbe: {{person.color.name}}</p>
+      </div>
+    </ng-container>
+</div>
